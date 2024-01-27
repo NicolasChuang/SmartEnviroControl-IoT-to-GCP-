@@ -12,14 +12,14 @@ e. Click "Create" to create the VM.
 2) Connect to the VM via SSH.
 a. Once the VM is created, click the SSH button next to the VM instance in the Google Cloud Console.
 3) Setup the VM.
-\# sudo apt-get update
-\# sudo apt-get upgrade
+a. \# sudo apt-get update
+b. \# sudo apt-get upgrade
 
 Step 2: Setup an MQTT server in Google Cloud VM
 1) Install MQTT broker.
-\# sudo apt-get install mosqui3o
+a. \# sudo apt-get install mosqui3o
 2) Install MQTT clients such as publishers and subscriber.
-\# sudo apt-get install mosquito-clients
+a. \# sudo apt-get install mosquito-clients
 3) Create a firewall rule to allow traffic on port 1883.
 4) Add the firewall rule to the VM instance's configuration.
 a. Edit the default-allow-internal rule to allow ingress traffic on TCP port 1883.
@@ -37,34 +37,34 @@ c. Connect the Maker Feather AIoT S3 to the computer and upload the firmware. (c
 
 Step 4: Enable and Start Mosquitto Service
 1) Check the status of the Mosquitto service.
-\# sudo systemctl status mosquitto
+a. \# sudo systemctl status mosquitto
 2) Enable and start Mosquitto service, if Mosquitto is disabled
-\# sudo systemctl enable mosquitto
-\# sudo systemctl start mosquito
+a. \# sudo systemctl enable mosquitto
+b. \# sudo systemctl start mosquito
 
 Step 5: Install Paho MQTT library
 1) Install Paho MQTT library using pip.
-\# sudo apt install python3-pip
-\# pip install paho-mq0
+a. \# sudo apt install python3-pip
+b. \# pip install paho-mq0
 Step 6: Set up MongoDB
 1) Install MongoDB on the VM instance and configure it.
-\# sudo apt-get install -y mongodb
+a. \# sudo apt-get install -y mongodb
 2) Install Pymongo. Pymongo is the Python driver for MongoDB. Install it using pip
-\# pip install pymongo
+b. \# pip install pymongo
 3) Write a script to ingest data into MongoDB
 4) Copy and run MQTTdata_mongo.db (change mqtt_broker_address)
 
 Step 6: Install required libraries in Google CLoud VM
 1) Install pandas library
-\# sudo apt install pandas
+a. \# sudo apt install pandas
 2) Install sckit-learn library
-\# pip install scikit-learn
+b. \# pip install scikit-learn
 
 Step 7: Import Python files and run.
 1) Import Python files and help.txt into GC VM
 2) Open help.txt for further explanation
 3) Extract output from MongoDB in csv format
-\# mongoexport --db smarthome --collection iot --type csv --fields data --out output.csv (output.csv can be renamed, eg. weatherdata.csv)
+a. \# mongoexport --db smarthome --collection iot --type csv --fields data --out output.csv (output.csv can be renamed, eg. weatherdata.csv)
 4) Run start.py for easier navigation
 5) Process the data first using process_data.py
 6) analyze.py, linear_regression.py can be used with new processed data
