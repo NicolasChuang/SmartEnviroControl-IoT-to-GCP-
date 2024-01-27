@@ -4,11 +4,11 @@ Development Environment Setup in GCP:
 
 Step 1: Setup a Google Cloud VM
 1) Create a Virtual Machine (Ubuntu) in Google Cloud.
-a. Navigate to the Google Cloud Console.
-b. Click on the Navigation menu and select "Compute Engine" > "VM instances."
-c. Click "Create Instance" to create a new virtual machine.
-d. Choose the operating system (e.g., Ubuntu) and configure other settings as needed.
-e. Click "Create" to create the VM.
+a\. Navigate to the Google Cloud Console.
+b\. Click on the Navigation menu and select "Compute Engine" > "VM instances."
+c\. Click "Create Instance" to create a new virtual machine.
+d\. Choose the operating system (e.g., Ubuntu) and configure other settings as needed.
+e\. Click "Create" to create the VM.
 2) Connect to the VM via SSH.
 a. Once the VM is created, click the SSH button next to the VM instance in the Google Cloud Console.
 3) Setup the VM.
