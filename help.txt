@@ -1,0 +1,16 @@
+To ensure MQTT connection between arduino and VM, ensure both MQTT server connection is the
+external ip of google VM instances
+
+files:
+start.py (to open simple ui selection)
+MQTTdata_mongo.py (for constant connection between arduino and VM, new browser window needs to be open)
+analyze.py (analyze lower, 1st quartile, median, 3rd quartile, upper threshold of data)
+help.txt (this file)
+linear_regression.py (training and prediction)
+process_data.py (preprocess data)
+
+commands:
+# mongoexport --db smarthome --collection iot --type csv --fields data --out output.csv (export csv from mongo)
+# python3 (run python files)
+# vi (view specific files)
+# ls (view local files)
